@@ -14,12 +14,8 @@ function Register() {
 
     // form validation rules 
     const validationSchema = Yup.object().shape({
-        firstName: Yup.string()
-            .required('First Name is required'),
-        lastName: Yup.string()
-            .required('Last Name is required'),
         email: Yup.string()
-            .required('Username is required'),
+            .required('Email is required'),
         password: Yup.string()
             .required('Password is required')
             .min(6, 'Password must be at least 6 characters')

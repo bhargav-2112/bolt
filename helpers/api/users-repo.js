@@ -37,7 +37,7 @@ function update(id, params) {
 }
 
 // prefixed with underscore '_' because 'delete' is a reserved word in javascript
-function        _delete(id) {
+function _delete(id) {
     // filter out deleted user and save
     users = users.filter(x => x.id.toString() !== id.toString());
     saveData();

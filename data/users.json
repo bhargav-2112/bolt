@@ -1,11 +1,16 @@
 [
     {
-        "firstName": "bhargav",
-        "lastName": "jagtap",
-        "username": "bhargav21",
-        "hash": "$2a$10$VgDu7zV8/8q3x4nOXuYFjeyvlkTs2SSCDKKAKYaCweAmP.zNUhs9e",
+        "email": "bhargav98jagtap@gmail.com",
+        "hash": "$2a$10$nXwMnwuTexWGVTgYPYc1O.VojcLzVTBtzal3v4rHNMuPLDOxbtHUS",
         "id": 1,
-        "dateCreated": "2022-08-31T09:57:02.894Z",
-        "dateUpdated": "2022-08-31T09:57:02.894Z"
+        "dateCreated": "2022-09-01T05:43:46.831Z",
+        "dateUpdated": "2022-09-01T05:43:46.831Z"
+    },
+    {
+        "email": "sam@ymail.com",
+        "hash": "$2a$10$8JvYq6Hr4eheU5rabv.Rv.sFEDNEdhvugrOQZ/osdiF.o/Ga7fWwy",
+        "id": 2,
+        "dateCreated": "2022-09-01T05:44:37.071Z",
+        "dateUpdated": "2022-09-01T05:44:37.071Z"
     }
 ]

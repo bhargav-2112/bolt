@@ -11,8 +11,8 @@ export default apiHandler({
 });
 
 function authenticate(req, res) {
-    const { username, password } = req.body;
-    const user = usersRepo.find(u => u.username === username);
+    const { email, password } = req.body;
+    const user = usersRepo.find(u => u.email === email);
 
     // validate
     if (!(user && bcrypt.compareSync(password, user.hash))) {
@@ -25,9 +25,7 @@ function authenticate(req, res) {
     // return basic user details and token
     return res.status(200).json({
         id: user.id,
-        username: user.username,
-        firstName: user.firstName,
-        lastName: user.lastName,
+        email: user.email,
         token
     });
 }
