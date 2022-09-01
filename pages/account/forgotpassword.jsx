@@ -10,7 +10,7 @@ const forgotpassword = () => {
           <p className="float-right">
             Don&apos;t have an account?{" "}
             <Link className="text-success" href="/account/login">
-              Sign Up for Free
+              Sign Up
             </Link>
           </p>
         </div>
@@ -23,7 +23,7 @@ const forgotpassword = () => {
           <form>
             <div className="form-group">
               <label>Email</label>
-              <input name="email" type="email" className="form-control" />
+              <input name="email" type="email" placeholder='Enter your email address' className="form-control" />
             </div>
 
             <button className="btn btn-success btn-lg btn-block">

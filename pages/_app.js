@@ -7,7 +7,7 @@ import 'styles/globals.css';
 import { userService } from 'services';
 import { Nav, Alert } from 'components';
 
-import "../pages/account/account.css"
+import "../pages/account/account.scss"
 
 export default App;
 
@@ -39,7 +39,7 @@ function App({ Component, pageProps }) {
     function authCheck(url) {
         // redirect to login page if accessing a private page and not logged in 
         setUser(userService.userValue);
-        const publicPaths = ['/account/login', '/account/register', '/account/forgotpassword'];
+        const publicPaths = ['/account/login', '/account/register', '/account/forgotpassword', '/account/confirmEmail', '/account/otp'];
         const path = url.split('?')[0];
         if (!userService.userValue && !publicPaths.includes(path)) {
             setAuthorized(false);
@@ -58,7 +58,9 @@ function App({ Component, pageProps }) {
                 <title>Bolt</title>
                 
                 {/* eslint-disable-next-line @next/next/no-css-tags */}
+                <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600&display=swap" rel="stylesheet"></link>
                 <link href="//netdna.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet" />
+                <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet"/>
             </Head>
 
             <div className={`app-container ${user ? 'bg-light' : ''}`}>

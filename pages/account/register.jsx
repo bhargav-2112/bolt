@@ -38,9 +38,14 @@ function Register() {
     return (
       <Layout>
         <div className="card border-0">
-        <div className='mb-5'>
-          <p className="float-right">Already have an account? <Link className="text-success" href="/account/login">Log in</Link></p>
-          </div>
+          {/* <div className="mb-5">
+            <p className="float-right">
+              Already have an account?{" "}
+              <Link className="text-success" href="/account/login">
+                Log in
+              </Link>
+            </p>
+          </div> */}
           <h4 className="text-center">Create Account</h4>
           <p className="text-center">Log in with your social accounts.</p>
           <div
@@ -48,11 +53,11 @@ function Register() {
             role="toolbar"
             aria-label="Basic example"
           >
-            <button type="button" className="btn btn-secondary">
-              Google
+            <button type="button" className="btn btn-brand">
+            <i className="fa fa-facebook"></i> Google
             </button>
-            <button type="button" className="btn btn-secondary ml-2">
-              Facebook
+            <button type="button" className="btn btn-brand ml-2">
+            <i className="fa fa-facebook"></i> Facebook
             </button>
           </div>
           <p className="text-center mt-4">Or continue with email</p>
@@ -63,20 +68,18 @@ function Register() {
                 <input
                   name="email"
                   type="email"
+                  placeholder="Enter email address"
                   {...register("email")}
-                  className={`form-control ${
-                    errors.email ? "is-invalid" : ""
-                  }`}
+                  className={`form-control ${errors.email ? "is-invalid" : ""}`}
                 />
-                <div className="invalid-feedback">
-                  {errors.email?.message}
-                </div>
+                <div className="invalid-feedback">{errors.email?.message}</div>
               </div>
               <div className="form-group">
                 <label>Password</label>
                 <input
                   name="password"
                   type="password"
+                  placeholder="Create password"
                   {...register("password")}
                   className={`form-control ${
                     errors.password ? "is-invalid" : ""
@@ -91,6 +94,7 @@ function Register() {
                 <input
                   name="confirm-password"
                   type="password"
+                  placeholder="Confirm password"
                   {...register("password")}
                   className={`form-control ${
                     errors.password ? "is-invalid" : ""
@@ -100,9 +104,18 @@ function Register() {
                   {errors.password?.message}
                 </div>
               </div>
+              <div className="form-check">
+                <input
+                  type="checkbox"
+                  className="form-check-input"
+                  id="exampleCheck1"
+                />
+                <label className="form-check-label">By signing up, I confirm that I’m 18 years of age or older and that I’ve read and agreed to the <Link className="text-success" href={''}>User Agreements</Link> and <Link className="text-success" href={''}>Privacy Policy</Link>.
+                </label>
+              </div>
               <button
                 disabled={formState.isSubmitting}
-                className="btn btn-success btn-lg btn-block"
+                className="btn btn-success btn-lg btn-block mt-2"
               >
                 {formState.isSubmitting && (
                   <span className="spinner-border spinner-border-sm mr-1"></span>

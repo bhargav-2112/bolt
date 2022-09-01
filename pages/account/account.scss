@@ -1,0 +1,68 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@700&display=swap');
+$BaseBG: #e0e0f0;
+body, .label {
+  font-family: 'Montserrat', sans-serif !important;
+}
+
+.login,
+.image {
+  min-height: 100vh;
+}
+
+.bg-image {
+  background-image: url('https://images.unsplash.com/photo-1648831007768-d8dc1cf82a44?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MXx8Ym9sdCUyMGNoYXJnaW5nJTIwc3RhdGlvbnN8ZW58MHwxfDB8fA%3D%3D&auto=format&fit=crop&w=500&q=60');
+  background-size: cover;
+  background-position: center center;
+}
+
+.btn-toolbar{
+  text-align: center;
+}
+
+.btn-success{
+  background-color: #14A800 !important;
+}
+
+.btn-resend{
+  background-color: #ECECEC;
+}
+
+.btn-brand{
+  background-color: #ECECEC;
+}
+
+.fixed-header, .fixed-footer{
+	width: 100%;
+	position: fixed;        
+	padding: 10px 0;
+}
+
+.fixed-header{
+	top: 0;
+}
+
+.fixed-footer{
+	bottom: 0;
+}
+
+.digit-group {
+	input {
+		width: 30px;
+		height: 50px;
+		background-color: lighten($BaseBG, 5%);
+		border: none;
+		line-height: 50px;
+		text-align: center;
+		font-size: 24px;
+		font-family: 'Raleway', sans-serif;
+		font-weight: 200;
+		color: white;
+		margin: 0 2px;
+	}
+}
+
+nav a{
+	text-decoration: none;
+	padding: 7px 25px;
+	display: inline-block;
+}

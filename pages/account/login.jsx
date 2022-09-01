@@ -36,17 +36,17 @@ function Login() {
     return (
       <Layout>
         <div className="card border-0">
-          <div className='mb-5'>
-          <p className="float-right">Don&apos;t have an account? <Link className="text-success" href="/account/register">Sign Up for Free</Link></p>
-          </div>  
+          {/* <div className='mb-5'>
+          <p className=" float-right">Don&apos;t have an account? <Link className="text-success" href="/account/register">Sign Up for Free</Link></p>
+          </div>   */}
           <h4 className="text-center">Sign In</h4>
           <p className="text-center">Log in with your social accounts.</p>
           <div className="btn-toolbar mx-auto" role="toolbar" aria-label="Basic example">
-            <button type="button" className="btn btn-secondary">
-              Google
+            <button type="button" className="btn btn-brand">
+            <i className="fa fa-google"></i> Google
             </button>
-            <button type="button" className="btn btn-secondary ml-2">
-              Facebook
+            <button type="button" className="btn btn-brand ml-2">
+            <i className="fa fa-facebook"></i> Facebook
             </button>
           </div>
             <p className="text-center mt-4">Or continue with email</p>
@@ -57,6 +57,7 @@ function Login() {
                 <input
                   name="email"
                   type="text"
+                  placeholder='Enter your email address'
                   {...register("email")}
                   className={`form-control ${
                     errors.email ? "is-invalid" : ""
@@ -71,6 +72,7 @@ function Login() {
                 <input
                   name="password"
                   type="password"
+                  placeholder='Enter password'
                   {...register("password")}
                   className={`form-control ${
                     errors.password ? "is-invalid" : ""
